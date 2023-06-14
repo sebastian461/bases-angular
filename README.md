@@ -2,6 +2,27 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
 
+## Creación de componentes
+
+Cada componente puede ser generado a través de del cli con 'ng g c [nombre-del-componente]'
+
+## Uso de snippet
+
+Los snippet son atajos o directivas que se pueden usar para generar porciones de código.
+Un ejemplo es a-ng para las directivas ng
+
+## Directivas ng
+
+Las directivas ng pueden ser usadas dentro del HTML para generar ciertas acciones a través de Angular
+
+## Creación de modulos
+
+El modulo principal es app.module.ts y cada vez que se crea un componente debe ser declarado ahí, pero por escalabilidad y uso se deben crear nuevos modulos para contener nuestros diferentes componentes.
+
+## Lógica de los componentes
+
+La lógica de los componentes debe estár contenida en los archivos name.component.ts, ya que son clases que extienden métodos de Angular para que su comportamiento sea el deseado en conjunto con archivos CSS y HTML
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

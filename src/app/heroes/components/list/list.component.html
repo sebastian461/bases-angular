@@ -1,0 +1,28 @@
+<h2>Listado de heroes</h2>
+
+<div *ngIf="deletedHero; else nothingWasDeleted">
+  <h3>
+    Héroe borrado <small class="text-danger">{{ deletedHero }}</small>
+  </h3>
+</div>
+
+<!-- 
+  ng-template funciona como un div (agrupador) y espera tener una directiva para mostrarse
+  Cuando se crea un ngIfElse se necesita una referencia (local), así se declara
+-->
+<ng-template #nothingWasDeleted>
+  <h3>No ha borrado ningún héroe</h3>
+</ng-template>
+
+<button
+  *ngIf="heroNames.length > 0"
+  (click)="removeLastHero()"
+  class="btn btn-outline-danger"
+>
+  Borrar ultimo heroe
+</button>
+
+<!-- ngFor es el equivalente a un for-each -->
+<ul class="mt-2 list-group">
+  <li *ngFor="let name of heroNames" class="list-group-item">{{ name }}</li>
+</ul>
