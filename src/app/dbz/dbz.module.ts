@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { DBZMainPageComponent } from './pages/main-page.component';
 import { ListComponent } from './components/list/list.component';
-import { FormComponent } from './components/form/form.component';
+import { AddCharacterComponent } from './components/form/form.component';
 
 @NgModule({
-  declarations: [DBZMainPageComponent, ListComponent, FormComponent],
+  declarations: [DBZMainPageComponent, ListComponent, AddCharacterComponent],
   exports: [DBZMainPageComponent],
   imports: [CommonModule],
 })
