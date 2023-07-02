@@ -19,5 +19,17 @@ export class DBZMainPageComponent {
   se realiza la inyección de dependencias, en este caso el servicio
   */
 
-  constructor(public dbzservice: DbzService) {}
+  constructor(private dbzservice: DbzService) {}
+
+  get characters(): Character[] {
+    return [...this.dbzservice.characters];
+  }
+
+  onDeleteCharacter(id: string): void {
+    this.dbzservice.onDeleteCharacter(id);
+  }
+
+  onNewCharacter(character: Character): void {
+    this.dbzservice.onNewCharacter(character);
+  }
 }
