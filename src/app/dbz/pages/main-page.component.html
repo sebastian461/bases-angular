@@ -1,0 +1,18 @@
+<h1>DBZ Personajes</h1>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <!-- Está es la manera de enviar algo a un componente hijo con el decorador @Input -->
+    <dbz-list
+      [characterList]="characters"
+      (onDeleteCharacter)="onDeleteCharacter($event)"
+    ></dbz-list>
+  </div>
+
+  <div class="col">
+    <dbz-add-Character
+      (onNewCharacter)="onNewCharacter($event)"
+    ></dbz-add-Character>
+  </div>
+</div>
